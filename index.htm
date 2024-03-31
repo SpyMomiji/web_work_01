@@ -6,25 +6,79 @@
     <title>貓</title>
     <link href="./css/main.css" rel="stylesheet">
     <script src="./js/zepto.min.js"></script>
-    <script src="./js/navloader.js"></script>
+    <script src="./js/common.js"></script>
 </head>
 <body>
     <div class="c-holder">
+        
+        <header class="header fixed">
+            <h1>這是一隻貓</h1>
+            <p>喵喵喵 喵喵喵喵喵</p>
+            <nav id="nav_src">
+                <ul>
+                    <li><a href="./index.htm">Happy Cat</a></li>
+                    <li><a href="./oiia.htm">oiiaioooooiai</a></li>
+                    <li><a href="./chibi.htm">CHIBI CHIBI CHABA CHABA</a></li>
+                </ul>
+                <p></p>
+            </nav>
+        </header>
+        <header class="header float hide">
+            <h2>這是一隻貓</h2>
+            <nav id="nav_dest"></nav>
+        </header>
+
         <!--Ajax 必須作用在 http 之下-->
-        <nav id="nav"></nav>
-        <script>loadnav()</script>
-        <section>
-            <h3>關於本站</h3>
-            <p>另兩個頁面都是有關貓的迷因，以下省略</p>
-            <p>
-                <video controls="" style="width: 500px;">
-                    <source src="./video/happy.mp4" type="video/mp4">
-                    瀏覽器不支援播放MP4
-                </video>
-            </p>
-        </section>
-        <section></section>
-        <footer>這是 footer</footer>
+        <script>
+            initHeader();
+            //loadnav()
+        </script>
+
+        <div class="i-holder">
+            
+            <article>
+                <h3 data-tag="about_site">關於本站</h3>
+                <p>另兩個頁面都是有關貓的迷因，以下省略</p>
+                
+                <h3 data-tag="happy_cat">Happy Cat</h3>
+                <p>一隻看起來很快樂的貓。</p>
+                <p>
+                    <video controls="" style="width: 500px;">
+                        <source src="./video/happy.mp4" type="video/mp4">
+                        瀏覽器不支援播放MP4
+                    </video>
+                </p>
+                <h3 data-tag="lorem_cat">Lorem Cat</h3>
+                <p>填充測試</p>
+                <img src="./img/cat01.jpg">
+                <p>在古老的小鎮上，有一隻名叫小花的貓，它是這個小鎮的寵兒，每天都在鎮上四處遊蕩，引來眾人的歡笑和喜愛。小花的毛皮是斑斕的，就像是春天的色彩在它的身上綻放。它的眼睛像是兩粒黑珍珠，閃爍著智慧和好奇。</p>
+                <p>每天清晨，當第一縷陽光照射進小鎮的時候，小花就會從主人的窗戶上輕盈地躍下，開始它的一天探險之旅。它先是去鎮上的市場，偷偷地趴在攤販的攤子後面，偷吃一些魚類或肉類，然後又悄悄地躲開，不讓任何人發現。</p>
+                <p>接著，小花會去找鎮上的小朋友們玩耍，它們總是高興地迎接小花的到來，陪著它在鎮上的每一個角落奔跑嬉戲。有時候，小花還會帶領著小朋友們去探險，探索鎮上的小巷子和草地，尋找著各種有趣的事物。</p>
+                <p>傍晚時分，當夕陽西下，小花就會回到它的家，蜷縮在軟軟的墊子上，閉上眼睛，享受著溫暖的夜晚。它偶爾會做一個美夢，夢見自己變成了一隻勇敢的大獅子，在草原上奔跑咆哮，展現著自己的英姿。</p>
+                <p>小花的故事在鎮上傳開，成為了人們口中的佳話。人們都說，小花是這個小鎮的明星，它用自己的快樂和活力，照亮了每一個人的生活，讓這個小鎮充滿了溫馨和幸福的氛圍。</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor esse modi ut nesciunt repellat, molestiae at minus maiores! Ex dolore tempore quo dignissimos magnam id tenetur amet facilis, quia dolores.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quasi deleniti officia magnam? Maxime veritatis, distinctio adipisci fugiat aliquam nulla fugit qui aliquid. Eius dolor repellat corporis, ullam culpa quam!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores animi numquam ipsa voluptates tempore minus suscipit et eum! Repellendus quia cupiditate totam, nam fuga obcaecati enim illo nemo saepe mollitia.</p>
+            </article>
+
+            <aside class="aside fixed">
+                <div class="aside float">
+                    <ul>
+                        <li><a href="#">回到最上方</a></li>
+                        <li><a href="#about_site">關於本站</a></li>
+                        <li><a href="#happy_cat">Happy Cat</a></li>
+                        <li><a href="#lorem_cat">Lorem Cat</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <script>
+                initAside();
+            </script>
+        </div>
+
+        <footer><p>這是 footer</p></footer>
+
     </div>
 </body>
 </html>

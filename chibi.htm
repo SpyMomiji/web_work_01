@@ -6,25 +6,63 @@
     <title>貓 - CHIBI CHIBI CHABA CHABA</title>
     <link href="./css/main.css" rel="stylesheet">
     <script src="./js/zepto.min.js"></script>
-    <script src="./js/navloader.js"></script>
+    <script src="./js/common.js"></script>
 </head>
 <body>
     <div class="c-holder">
+
+        <header class="header fixed">
+            <h1>這是一隻貓</h1>
+            <p>喵喵喵 喵喵喵喵喵</p>
+            <nav id="nav_src">
+                <ul>
+                    <li><a href="./index.htm">Happy Cat</a></li>
+                    <li><a href="./oiia.htm">oiiaioooooiai</a></li>
+                    <li><a href="./chibi.htm">CHIBI CHIBI CHABA CHABA</a></li>
+                </ul>
+                <p></p>
+            </nav>
+        </header>
+        <header class="header float hide">
+            <h2>這是一隻貓</h2>
+            <nav id="nav_dest"></nav>
+        </header>
+
         <!--Ajax 必須作用在 http 之下-->
-        <nav id="nav"></nav>
-        <script>loadnav()</script>
-        <section>
-            <h3>CHIBI CHIBI CHABA CHABA</h3>
-            <p>一隻隨著節奏搖頭晃腦的貓</p>
-            <p>
-                <video controls="" style="width: 500px;">
-                    <source src="./video/chbib.mp4" type="video/mp4">
-                    瀏覽器不支援播放MP4
-                </video>
-            </p>
-        </section>
-        <section></section>
-        <footer>這是 footer</footer>
+        <script>
+            initHeader();
+            //loadnav()
+        </script>
+        
+        <div class="i-holder">
+            
+            <article>
+                <h3 data-tag="chibi">CHIBI CHIBI CHABA CHABA</h3>
+                <p>一隻隨著節奏搖頭晃腦的貓</p>
+                <p>
+                    <video controls="" style="width: 500px;">
+                        <source src="./video/chbib.mp4" type="video/mp4">
+                        瀏覽器不支援播放MP4
+                    </video>
+                </p>
+            </article>
+
+            <aside class="aside fixed">
+                <div class="aside float">
+                    <ul>
+                        <li><a href="#">回到最上方</a></li>
+                        <li><a href="#chibi">CHIBI CHIBI CHABA CHABA</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <script>
+                initAside();
+            </script>
+        </div>
+
+        <footer><p>這是 footer</p></footer>
+
     </div>
 </body>
 </html>

@@ -6,28 +6,66 @@
     <title>貓 - oiiaioooooiai</title>
     <link href="./css/main.css" rel="stylesheet">
     <script src="./js/zepto.min.js"></script>
-    <script src="./js/navloader.js"></script>
+    <script src="./js/common.js"></script>
 </head>
 <body>
     <div class="c-holder">
+        
+        <header class="header fixed">
+            <h1>這是一隻貓</h1>
+            <p>喵喵喵 喵喵喵喵喵</p>
+            <nav id="nav_src">
+                <ul>
+                    <li><a href="./index.htm">Happy Cat</a></li>
+                    <li><a href="./oiia.htm">oiiaioooooiai</a></li>
+                    <li><a href="./chibi.htm">CHIBI CHIBI CHABA CHABA</a></li>
+                </ul>
+                <p></p>
+            </nav>
+        </header>
+        <header class="header float hide">
+            <h2>這是一隻貓</h2>
+            <nav id="nav_dest"></nav>
+        </header>
+
         <!--Ajax 必須作用在 http 之下-->
-        <nav id="nav"></nav>
-        <script>loadnav()</script>
-        <section>
-            <h3>oiiaioooooiai</h3>
-            <p>旋轉的貓咪並配上很洗腦的旋律</p>
-            <p>
-                <video controls="" style="width: 250px;">
-                    <source src="./video/oiia.mp4" type="video/mp4">
-                    瀏覽器不支援播放MP4
-                </video>
-            </p>
-            <p>
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/OTAqMCyvOE0?si=ry3rxsgK5lKw89oh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </p>
-        </section>
-        <section></section>
-        <footer>這是 footer</footer>
+        <script>
+            initHeader();
+            //loadnav()
+        </script>
+        
+        <div class="i-holder">
+            
+            <article>
+                <h3 data-tag="oiia">oiiaioooooiai</h3>
+                <p>旋轉的貓咪並配上很洗腦的旋律</p>
+                <p>
+                    <video controls="" style="width: 250px;">
+                        <source src="./video/oiia.mp4" type="video/mp4">
+                        瀏覽器不支援播放MP4
+                    </video>
+                </p>
+                <p>
+                    <iframe width="500" height="315" src="https://www.youtube.com/embed/OTAqMCyvOE0?si=ry3rxsgK5lKw89oh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </p>
+            </article>
+
+            <aside class="aside fixed">
+                <div class="aside float">
+                    <ul>
+                        <li><a href="#">回到最上方</a></li>
+                        <li><a href="#oiia">oiiaioooooiai</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <script>
+                initAside();
+            </script>
+        </div>
+        
+        <footer><p>這是 footer</p></footer>
+
     </div>
 </body>
 </html>
