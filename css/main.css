@@ -15,6 +15,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: darkgray;
+    background-image: url(../img/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 img {
