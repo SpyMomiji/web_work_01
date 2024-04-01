@@ -61,23 +61,27 @@ function initHeader(){
     measureDest();
 }
 
+function scrollToTag(tag){
+    let target;
+	if( tag && (target = $(`[data-tag=${decodeURIComponent(tag).replace(/ +/g,'\\ ')}]`)[0]) ){
+		target.scrollIntoView();
+		window.requestAnimationFrame( ()=>window.scrollTo(window.scrollX,window.scrollY-measureFloatHeigth) );
+		//window.scrollTo(window.scrollX,window.scrollY-measureFloatHeigth);
+	} else {
+        window.scrollTo(window.scrollX,0);
+	}
+
+}
+
 function initAside(){
     asideFloat = $(".aside.float"); //浮動 aside
     asideFloat.find("a").on("click",function(){
-        let tag = this.href.match(/#([A-Za-z0-9_]*?)$/);
-        if(!tag){
-            window.scrollY = 0;
-            return;
-        }
-
-        let target = $(`[data-tag=${tag[1]}]`)[0];
-        if(!target){
-            window.scrollY = 0;
-            return;
-        }
-
-        target.scrollIntoView();
-        window.scrollTo(window.scrollX,window.scrollY-measureFloatHeigth);
-
+        let tag = this.href.match(/#(.*)$/);
+        tag && scrollToTag(tag[1]);
     })
 }
+
+$(function(){
+    //await (new Promise((a)=>setTimeout(a,200)));
+    scrollToTag(location.hash.substring(1));
+})
