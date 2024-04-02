@@ -76,6 +76,36 @@ article {
     margin-right: 15px;
 }
 
+.header ul li a{
+    border: solid 1px black;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.header ul li a, .header ul li a:visited {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    box-shadow: black 0px 0px 0px;
+	transition-property: background-color, bcolor, box-shadow;
+	transition-duration: 200ms;
+	transition-timing-function: linear;
+}
+
+.header ul li a:hover, .header ul li a:visited:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    box-shadow: black 0px 0px 9px;
+}
+
+@keyframes nav_button {
+	0%   {transform: rotate(0.00turn);}
+	25%  {transform: rotate(0.25turn);}
+	50%  {transform: rotate(0.50turn);}
+	100% {transform: rotate(1.00turn);}
+}
+
 footer {
     border: solid black;
     border-width: 1px 0 0;
