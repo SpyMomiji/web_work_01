@@ -1,3 +1,17 @@
+body {
+	font-family: "Noto Sans TC", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h3 {
+    margin-top: 35px;
+}
+
 .c-holder {
 	max-width: 1000px;
 	min-width: 1000px;
