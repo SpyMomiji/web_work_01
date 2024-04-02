@@ -65,7 +65,10 @@ function scrollToTag(tag){
     let target;
 	if( tag && (target = $(`[data-tag=${decodeURIComponent(tag).replace(/ +/g,'\\ ')}]`)[0]) ){
 		target.scrollIntoView();
-		window.requestAnimationFrame( ()=>window.scrollTo(window.scrollX,window.scrollY-measureFloatHeigth) );
+		window.requestAnimationFrame( ()=>
+			($('body').height() > window.scrollY + window.innerHeight)
+			&& window.scrollTo(window.scrollX,window.scrollY-measureFloatHeigth)
+			);
 		//window.scrollTo(window.scrollX,window.scrollY-measureFloatHeigth);
 	} else {
         window.scrollTo(window.scrollX,0);
